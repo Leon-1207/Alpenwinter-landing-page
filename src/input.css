@@ -17,6 +17,7 @@ body {
     padding: 0;
     width: 100vw;
     font-family: "Poppins", sans-serif !important;
+    color: var(--primary);
 }
 
 .overlay-wrapper {
@@ -80,7 +81,11 @@ h1 {
 }
 
 h2 {
-    @apply md:text-xl text-lg;
+    @apply md:text-2xl text-xl;
+}
+
+h3 {
+    @apply text-xl lg:text-2xl text-accent mb-4;
 }
 
 .btn {
@@ -103,4 +108,44 @@ h2 {
 
 .header-content-wrapper {
     @apply p-10 xl:p-20 w-2/5;
+}
+
+.main-px {
+    @apply px-10 xl:px-20;
+}
+
+.custom-shape-divider-top-1663274745 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1663274745 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 10vw;
+}
+
+.wave-wrapper {
+    @apply relative pt-[10vw] w-full;
+}
+
+.card {
+    @apply rounded-md shadow-lg flex lg:flex-row flex-col-reverse overflow-hidden;
+}
+
+.card > img {
+    @apply w-full lg:w-1/2 grow lg:diagonal-edge-left lg:ml-5 xl:ml-10 object-cover;
+}
+
+.card > div {
+    @apply p-8 lg:max-w-lg pb-10;
+}
+
+.link {
+    @apply text-accent underline cursor-pointer text-sm;
 }

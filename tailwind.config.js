@@ -9,6 +9,7 @@ module.exports = {
           light: "#636363"
         },
         accent: "#14b0ee",
+        "secondary-bg": "#f5f5f7"
       }
     },
   },
