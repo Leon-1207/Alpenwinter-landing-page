@@ -10,18 +10,28 @@
 </head>
 
 <body>
-    <div class="w-full bg-slate-100">
-        <div class="w-full max-w-7xl mx-auto shadow-lg">
+    <div class="w-full bg-slate-100 min-h-screen">
+        <div class="w-full lg:w-4/5 max-w-7xl mx-auto shadow-lg bg-white">
             <!-- header -->
-            <div class="header-wrapper snow-container">
-                <img class="background" src="img/header-bg.jpg">
-                <div class="overlay snow"></div>
-                <div class="overlay bg-black opacity-25"></div>
-                <div class="overlay">
-                    <h1>Skifreizeit Zell am See</h1>
-                    <h2>Premium Ski- & Snowboardcamp
-                        im größten Skigebiet Östereichs
-                        Zell am See & Saalbach</h2>
+            <div class="landing-header lg:flex">
+                <!-- left side -->
+                <div class="py-10 px-10 hidden lg:block max-w-2xl">
+                    <div data-template="header-content"></div>
+                </div>
+
+                <!-- right side -->
+                <div class="lg:diagonal-edge-left overlay-wrapper snow-container">
+                    <div class="py-10 px-20 lg:hidden">
+                        <div data-template="header-content"></div>
+                    </div>
+                    <img class="lg:background overlay object-cover" src="img/header-bg.jpg">
+                    <div class="overlay snow"></div>
+                    <div class="overlay bg-black opacity-25"></div>
+                    <div class="lg:hidden py-10 overlay px-20">
+
+                        <div data-template="header-content"></div>
+
+                    </div>
                 </div>
             </div>
 
@@ -47,6 +57,39 @@
             </div>
         </div>
     </div>
+
+    <!-- templates -->
+    <template id="header-content">
+        <div class="flex flex-col items-start h-full justify-between max-w-xl">
+            <div>
+                <h1 class="mb-8 text-white lg:text-primary">Skifreizeit Zell am See</h1>
+                <h2 class="text-white lg:text-primary">Premium Ski- & Snowboardcamp
+                    im größten Skigebiet Östereichs
+                    Zell am See & Saalbach</h2>
+
+                <ul class="feature-list mt-8 mb-5">
+                    <li>Top Organisation</li>
+                    <li>Geschulte Betreuer</li>
+                    <li>Langjährige Erfahrung</li>
+                    <li>Premium Unterkunft</li>
+                    <li>Schneegarantie</li>
+                </ul>
+            </div>
+            <button class="btn">Unsere Angebote</button>
+        </div>
+    </template>
+
+    <!-- load templates -->
+    <script>
+        void async function () {
+            document.querySelectorAll("[data-template]").forEach((element) => {
+                const templateId = element.getAttribute("data-template");
+                const template = document.getElementById(templateId);
+                const templateContentClone = template.content.cloneNode(true);
+                element.replaceWith(templateContentClone);
+            })
+        }();
+    </script>
 </body>
 
 </html>

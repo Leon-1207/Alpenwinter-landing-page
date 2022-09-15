@@ -2,27 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .diagonal-edge-left {
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    font-family: "Poppins", sans-serif !important;
+
 }
 
-
-/* header area */
-.header-wrapper {
+.overlay-wrapper {
     position: relative;
     width: 100%;
 }
-.header-wrapper .background {
-    width: 100%;
-    height: auto;
+
+.overlay-wrapper .background {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 }
-.header-wrapper .overlay {
+
+.overlay-wrapper .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -30,6 +39,13 @@ body {
     left: 0;
 }
 
+.landing-header {
+    min-height: 60vh;
+}
+
+.landing-header .feature-list {
+    @apply text-gray-200 lg:text-primary-light;
+}
 
 /* snow */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
@@ -42,7 +58,7 @@ body {
     width: 100%;
     overflow: hidden;
     background-image: url("https://cdn.discordapp.com/attachments/744182992037216260/990023034524033105/snow1.png"), url("https://cdn.discordapp.com/attachments/744182992037216260/990023034758922250/snow2.png"), url("https://cdn.discordapp.com/attachments/744182992037216260/990023034951827556/snow3.png");
-    animation: snow 20s linear infinite;
+    animation: snow 40s linear infinite;
 }
 
 @keyframes snow {
@@ -53,4 +69,35 @@ body {
     100% {
         background-position: 500px 1000px, 400px 400px, 300px 300px;
     }
+}
+
+h1,
+h2 {
+    color: var(--primary);
+}
+
+h1 {
+    @apply text-7xl font-bold;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+.btn {
+    /* bg-gradient-to-r from-[#06adf4] to-[#13e5ee]  */
+    @apply bg-accent px-4 py-2 text-white rounded-full shadow hover:shadow-md;
+}
+
+.feature-list {
+    @apply text-primary-light text-xs flex flex-wrap;
+}
+
+.feature-list>li::before {
+    content: "\2713";
+    margin-right: 4px;
+}
+
+.feature-list > li{
+    @apply whitespace-nowrap mr-2 mb-1;
 }
