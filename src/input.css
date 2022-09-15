@@ -58,7 +58,7 @@ body {
     width: 100%;
     overflow: hidden;
     background-image: url("https://cdn.discordapp.com/attachments/744182992037216260/990023034524033105/snow1.png"), url("https://cdn.discordapp.com/attachments/744182992037216260/990023034758922250/snow2.png"), url("https://cdn.discordapp.com/attachments/744182992037216260/990023034951827556/snow3.png");
-    animation: snow 40s linear infinite;
+    animation: snow 20s linear infinite;
 }
 
 @keyframes snow {
