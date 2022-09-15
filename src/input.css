@@ -17,7 +17,6 @@ body {
     padding: 0;
     width: 100vw;
     font-family: "Poppins", sans-serif !important;
-
 }
 
 .overlay-wrapper {
@@ -77,11 +76,11 @@ h2 {
 }
 
 h1 {
-    @apply text-7xl font-bold;
+    @apply md:text-7xl text-5xl font-bold;
 }
 
 h2 {
-    @apply text-xl;
+    @apply md:text-xl text-lg;
 }
 
 .btn {
@@ -100,4 +99,8 @@ h2 {
 
 .feature-list > li{
     @apply whitespace-nowrap mr-2 mb-1;
+}
+
+.header-content-wrapper {
+    @apply p-10 xl:p-20 w-2/5;
 }

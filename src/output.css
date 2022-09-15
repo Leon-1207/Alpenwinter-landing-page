@@ -551,46 +551,21 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mb-5 {
   margin-bottom: 1.25rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
 }
 
 .flex {
@@ -613,18 +588,6 @@ video {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
 .max-w-xl {
   max-width: 36rem;
 }
@@ -641,16 +604,6 @@ video {
   justify-content: space-between;
 }
 
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -661,32 +614,18 @@ video {
      object-fit: cover;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.opacity-25 {
-  opacity: 0.25;
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(20 176 238 / var(--tw-text-opacity));
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-lg {
@@ -782,14 +721,28 @@ h2 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 .btn {
@@ -834,6 +787,17 @@ h2 {
   white-space: nowrap;
 }
 
+.header-content-wrapper {
+  width: 40%;
+  padding: 2.5rem;
+}
+
+@media (min-width: 1280px) {
+  .header-content-wrapper {
+    padding: 5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
@@ -847,13 +811,13 @@ h2 {
     display: none;
   }
 
-  .lg\:w-4\/5 {
-    width: 80%;
-  }
-
   .lg\:text-primary {
     --tw-text-opacity: 1;
     color: rgb(44 44 44 / var(--tw-text-opacity));
+  }
+
+  .lg\:opacity-25 {
+    opacity: 0.25;
   }
 
   .lg\:diagonal-edge-left {
