@@ -1,0 +1,28 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.header-wrapper .foreground {
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+}
+
+.header-wrapper .background {
+    width: 100%;
+    height: auto;
+}
