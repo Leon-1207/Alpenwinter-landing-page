@@ -12,21 +12,15 @@
 <body>
     <div class="w-full mx-auto shadow-lg min-h-screen">
         <!-- header -->
-        <div class="landing-header lg:flex bg-secondary-bg lg:bg-white">
-            <!-- left side -->
-            <div class="header-content-wrapper hidden lg:block">
-                <div data-template="header-content"></div>
-            </div>
-
-            <!-- right side -->
-            <div class="lg:diagonal-edge-left overlay-wrapper snow-container">
-                <div class="header-content-wrapper lg:hidden">
+        <div class="landing-header lg:flex bg-secondary-bg">
+            <div class="overlay-wrapper snow-container">
+                <div class="header-content-wrapper pointer-events-none">
                     <div data-template="header-content"></div>
                 </div>
-                <img class="lg:background overlay object-cover" src="img/header-bg.jpg">
+                <img class="overlay object-cover" src="img/header.jpeg">
                 <div class="overlay snow"></div>
-                <div class="overlay bg-black opacity-50 lg:opacity-25"></div>
-                <div class="lg:hidden overlay header-content-wrapper">
+                <div class="overlay bg-black opacity-50"></div>
+                <div class="overlay header-content-wrapper">
                     <div data-template="header-content"></div>
                 </div>
             </div>
@@ -81,25 +75,18 @@
 
     <!-- templates -->
     <template id="header-content">
-        <div class="flex flex-col items-start h-full justify-between max-w-xl">
+        <div class="flex flex-col items-start h-full max-w-xl 2xl:max-w-2xl">
             <div>
-                <h1 class="mb-8 text-white lg:text-primary">
+                <h1 class="mb-8 text-white">
                     <span class="text-accent">Skifreizeit</span>
-                    Zell am See
+                    <br>
+                    <span class="whitespace-nowrap">Zell am See</span>
                 </h1>
-                <h2 class="text-white lg:text-primary">Premium Ski- & Snowboardcamp
+                <h2 class="text-white">Premium Ski- & Snowboardcamp
                     im größten Skigebiet Östereichs
                     Zell am See & Saalbach</h2>
-
-                <ul class="feature-list mt-8 mb-5">
-                    <li>Top Organisation</li>
-                    <li>Geschulte Betreuer</li>
-                    <li>Langjährige Erfahrung</li>
-                    <li>Premium Unterkunft</li>
-                    <li>Schneegarantie</li>
-                </ul>
             </div>
-            <button class="btn">Unsere Angebote</button>
+            <button class="btn mt-12">Unsere Angebote</button>
         </div>
     </template>
 
