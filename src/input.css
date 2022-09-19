@@ -13,6 +13,8 @@
 }
 
 body {
+    --primary: #2c2c2c;
+    --secondary-bg: #f5f5f7;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -131,7 +133,7 @@ h3 {
 }
 
 .card {
-    @apply rounded-md shadow-lg flex lg:flex-row flex-col-reverse overflow-hidden;
+    @apply rounded-md shadow-md flex lg:flex-row flex-col-reverse overflow-hidden;
 }
 
 .card > img {
@@ -152,4 +154,9 @@ h3 {
 
 #trust-box > * {
     @apply m-2;
+}
+
+#content-area h2 {
+    margin-bottom: .75em;
+    @apply text-primary text-3xl sm:text-4xl lg:text-5xl;
 }

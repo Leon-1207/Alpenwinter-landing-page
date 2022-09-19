@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2c2c2c",
+          DEFAULT: "var(--primary)",
           light: "#636363"
         },
         accent: "#14b0ee",
-        "secondary-bg": "#f5f5f7"
+        "secondary-bg": "var(--secondary-bg)"
       }
     },
   },
