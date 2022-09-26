@@ -171,8 +171,68 @@ h3 {
     @apply text-accent underline cursor-pointer text-sm;
 }
 
+#boxes-under-header-wrapper {
+    @apply relative -top-5 -mb-5 lg:-top-10 lg:-mb-10 flex flex-wrap-reverse lg:grid gap-0 lg:gap-[5vw] grid-flow-row lg:grid-flow-col;
+}
+
+.simple-box {
+    @apply shadow-md bg-white rounded-md;
+}
+
+#reviews-boxes {
+    @apply grid grid-flow-row grid-cols-1 sm:grid-cols-2 mt-10 lg:mt-0;
+}
+
+#reviews-boxes > div {
+    @apply p-5 relative mt-14 pt-14 h-auto mb-auto;
+}
+
+#reviews-boxes > div p {
+    @apply text-primary-light relative;
+}
+
+#reviews-boxes blockquote {
+    margin-bottom:-30px;
+    position: relative; 
+    margin: 0 auto; 
+    padding-left: 0.4em; 
+}
+#reviews-boxes blockquote p {
+    @apply mx-4;
+}
+#reviews-boxes blockquote p::before, #reviews-boxes blockquote p::after{
+    @apply text-5xl absolute text-accent;
+}
+#reviews-boxes blockquote p::before {
+    content: "\201C";
+    top: -0.2em;
+    left: -0.5em; 
+}
+#reviews-boxes blockquote p::after {
+    content: "\201D";
+    bottom: -0.6em;
+    right: 0; 
+}
+#reviews-boxes h4 {
+    @apply text-right mt-4 text-base;
+}
+#reviews-boxes h4 :first-child {
+    @apply text-accent font-semibold;
+}
+#reviews-boxes h4 :last-child {
+    @apply text-primary;
+}
+
+#reviews-boxes > div img {
+    @apply w-28 h-auto absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+#trust-box img {
+    @apply h-auto object-contain;
+}
+
 #trust-box {
-    @apply bg-white p-5 rounded-md flex shadow-md flex-wrap relative -top-5 -mb-5 lg:-top-10 lg:-mb-10;
+    @apply p-5 flex flex-wrap content-start items-center h-auto mb-auto;
 }
 
 #trust-box > * {
@@ -191,3 +251,4 @@ h3 {
 .card .read-more-wrapper > a {
     @apply link absolute bottom-10 left-8;
 }
+
