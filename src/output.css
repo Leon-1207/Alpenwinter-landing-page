@@ -568,6 +568,11 @@ video {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -586,6 +591,14 @@ video {
 
 .mt-12 {
   margin-top: 3rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .flex {
@@ -649,6 +662,10 @@ video {
   background-color: var(--secondary-bg);
 }
 
+.bg-primary {
+  background-color: var(--primary);
+}
+
 .fill-secondary-bg {
   fill: var(--secondary-bg);
 }
@@ -658,8 +675,21 @@ video {
      object-fit: cover;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-14 {
   padding-bottom: 3.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-center {
